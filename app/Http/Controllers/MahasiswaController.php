@@ -22,4 +22,9 @@ class MahasiswaController extends Controller
         Mahasiswa::create($request->all());
         return redirect()->route('mahasiswa');
     }
+
+    public function edit($id)
+    {
+        
+    }
 }

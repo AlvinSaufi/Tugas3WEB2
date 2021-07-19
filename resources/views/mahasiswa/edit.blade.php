@@ -5,19 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Tambah Data Mahasiswa</div>
+                <div class="card-header">Edit Mahasiswa</div>
 
                 <div class="card-body">
-                    <form action ="{{ route ('simpan.mahasiswa') }}" method="post">
+                    <form action ="#" method="post">
                     @csrf
                         <div class="form-row">
                             <div class="col">
                                 <label for="">Id User</label>
                                 <input type="text" name ="user_id" class="form-control" placeholder="tambahkan ID User Anda">
-                            </div>
-                            <div class="col">
-                                <label for="">Npm</label>
-                                <input type="number" name ="npm" class="form-control" placeholder="tambahkan Npm Anda">
                             </div>
                             <div class="col">
                                 <label for="">Tanggal Lahir</label>
@@ -39,6 +35,10 @@
                                 <label for="">Gender/Jenis Kelamin</label>
                                 <input type="text" name ="gender" class="form-control" placeholder="tambahkan Jenis Kelamin Anda">
                             </div>
+                            <div class="col">
+                                <label for="">foto</label>
+                                <input type="file" name ="foto" class="form-control" placeholder="....">
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="form-row float-right">
                         <div class="col">
                             <button type="submit" class="btn-md btn-primary">Simpan</button>
-                            <a href="{{route ('mahasiswa') }}" class="btn btn-md btn-danger">Batal</a>
+                            <a href="{{route ('mahasiswa.index') }}" class="btn btn-md btn-danger">Batal</a>
                         </div>
                     </div>
                 </div>

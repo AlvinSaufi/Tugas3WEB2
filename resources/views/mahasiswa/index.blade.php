@@ -16,24 +16,28 @@
                     <tr>
                         <th>No.</th>
                         <th>Nama Lengkap</th>
+                        <th>Npm</th>
                         <th>Tempat, tanggal Lahir</th>
                         <th>Telepon</th>
                         <th>Alamat</th>
                         <th>Jenis Kelamin</th>
-                        <th>Foto</th>
                         <th>Aksi</th>
                     </tr>
+                    @php
+                            $no = 1;
+                    @endphp
                     @foreach ($mahasiswa as $mhs)
                     <tr>
+                        <td>{{ $no++ }}</td>
                         <td>{{ $mhs->id }}</td>
                         <td>{{ $mhs->user->name }}</td>
+                        <td>{{ $mhs->npm }}</td>
                         <td>{{ $mhs->tempat_lahir.', '. $mhs->tgl_lahir }}</td>
                         <td>{{ $mhs->telepon }}</td>
                         <td>{{ $mhs->alamat }}</td>
                         <td>{{ $mhs->gender }}</td>
-                        <td></td>
                         <td>
-                            <a href="#" class="btn btn-sm btn-warning">EDIT</a>
+                            <a href="{{ route('mahasiswa.edit', $mhs->id) }}" class="btn btn-sm btn-warning">EDIT</a>
                             <a href="#" class="btn btn-sm btn-danger">HAPUS</a>
                         </td>
                     </tr>
